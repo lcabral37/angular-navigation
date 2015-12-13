@@ -16,4 +16,4 @@ CORS issues just run:
 
     npm start
 
-
+To see the application running, you can now open your browser in http://localhost:8000/
