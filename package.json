@@ -1,7 +1,17 @@
 {
-  "name": "Angular Single Page navigation",
+  "name": "Angular-single-page-navigation",
+  "description": "Angular Single Page Navigation",
   "version": "0.0.1",
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server ./frontend/ -a localhost -p 8000"
+  },
   "author": {
-    "name": "Luis Miguel Cabral"
+    "name": "Luis Miguel Cabral",
+    "email": "lcabral37@gmail.com"
+  },
+  "dependencies": {
+    "http-server": "^0.8.5"
   }
 }

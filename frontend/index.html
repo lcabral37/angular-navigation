@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tabsSample">
+  <head>
+
+    <title>Sample Tab Navigation App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- External dependencies -->
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-route/angular-route.min.js"></script>
+
+    <!-- Internal dependencies-->
+    <link rel="stylesheet" href="app.css">
+
+    <script src="app.js"></script>
+    <script src="controllers/tab.js"></script>
+    <script src="controllers/about.js"></script>
+    <script src="controllers/register.js"></script>
+    <script src="controllers/confirm.js"></script>
+    <script src="controllers/complete.js"></script>
+
+  </head>
+  <body>
+    <!-- The actual body... just the menu, the rest is rendered via angular -->
+    <div ng-controller="tabCtrl">
+      <ul class="nav nav-tabs" role="navigation">
+        <li ng-class="{active: isActive('/about')}">
+          <a href="#/about">About</a>
+        </li>
+        <li ng-class="{active: isActive('/register')}">
+          <a href="#/register">Register</a>
+        </li>
+        <li ng-class="{active: isActive('/confirm')}">
+          <a href="#/confirm">Confirm</a>
+        </li>
+        <li ng-class="{active: isActive('/complete')}">
+          <a href="#/complete">Complete</a>
+        </li>
+      </ul>
+      <div ng-view class="app-view"></div>
+
+    </div>
+  </body>
+</html>

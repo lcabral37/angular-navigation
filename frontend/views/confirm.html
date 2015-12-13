@@ -1,0 +1,27 @@
+<div ng-controller="confirmCtrl">
+  <div class="alert alert-warning" role="warning">
+    Here you might want to take a look at the extensive form you just filled and confirm or go back to fix it.
+  </div>
+  <form>
+    <div>
+      <label>Username:</label> {{user.username}}
+    </div>
+
+    <div>
+      <label>Full Name:</label> {{user.fullname}}
+    </div>
+
+    <div>
+      <label>Email:</label> {{user.email}}
+    </div>
+
+    <div>
+      <label>Password:</label> {{user.fakePassword}}
+    </div>
+
+    <a href="#/register" type="button" class="btn btn-primary pull-left">Go Back</a>
+
+    <a href="#/complete" type="button" class="btn btn-primary pull-right">Confirm</a>
+
+  </form>
+</div>
