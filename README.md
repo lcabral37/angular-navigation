@@ -12,12 +12,17 @@ Test demo [here](http://dev-corpusplay.rhcloud.com/).
  - nodejs v.0.12.7
  - npm 3.5.2
 
+## Build
+Buil consists only of the lint step
+
+    gulp lint
+
 ## Running
 
 You can just point your Browser to the local directory but in order to avoid
 CORS issues just run:
 
-   npm start
+    npm start
 
 To see the application running, you can now open your browser in http://localhost:8000/
 

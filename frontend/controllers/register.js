@@ -10,7 +10,7 @@ angular.module('tabsSample')
       var userString = localStorage.getItem('storedUser');
 
       $scope.user = userString ? JSON.parse(userString) : {};
-    }
+    };
 
     $scope.register = function(user) {
       // test
@@ -27,7 +27,7 @@ angular.module('tabsSample')
       delete $scope.passwordError;
       delete $scope.passwordCheckError;
 
-      if (!password || password.trim() == '') {
+      if (!password || password.trim() === '') {
         $scope.passwordError = "Password cannot be empty";
         return false;
       }
@@ -38,7 +38,7 @@ angular.module('tabsSample')
       }
 
       return true;
-    }
+    };
 
     $scope.loadUser();
 }]);
