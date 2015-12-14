@@ -1,5 +1,11 @@
-var jshint = require('gulp-jshint');
-var gulp   = require('gulp');
+var jshint    = require('gulp-jshint'),
+  bower       = require('gulp-bower'),
+  taskListing = require('gulp-task-listing'),
+  gulp        = require('gulp');
+
+gulp.task('bower', function() {
+  return bower();
+});
 
 gulp.task('lint', function() {
   return gulp.src([
@@ -10,4 +16,6 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('default', ['lint']);
+gulp.task('help', taskListing.withFilters(null, 'default'));
+
+gulp.task('default', ['lint', 'bower']);

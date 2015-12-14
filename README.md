@@ -13,9 +13,10 @@ Test demo [here](http://dev-corpusplay.rhcloud.com/).
  - npm 3.5.2
 
 ## Build
-Buil consists only of the lint step
+Gulp is used as part of the build step and is called after npm install is run.
+If you want to run each step seperately run
 
-    gulp lint
+    gulp help
 
 ## Running
 
