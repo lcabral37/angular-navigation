@@ -29,18 +29,12 @@
     <!-- The actual body... just the menu, the rest is rendered via angular -->
     <div ng-controller="tabCtrl">
       <ul class="nav nav-tabs" role="navigation">
-        <li ng-class="{active: isActive('/about')}">
-          <a href="#/about">About</a>
+        <li
+            ng-repeat="t in tabs"
+            ng-class="{active: isActive('{{t.route}}')}">
+          <a href="#{{t.route}}">{{t.heading}}</a>
         </li>
-        <li ng-class="{active: isActive('/register')}">
-          <a href="#/register">Register</a>
-        </li>
-        <li ng-class="{active: isActive('/confirm')}">
-          <a href="#/confirm">Confirm</a>
-        </li>
-        <li ng-class="{active: isActive('/complete')}">
-          <a href="#/complete">Complete</a>
-        </li>
+
       </ul>
       <div ng-view class="app-view"></div>
 
